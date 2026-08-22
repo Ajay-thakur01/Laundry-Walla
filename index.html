@@ -3,80 +3,244 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laundry Wallah</title>
+    <title>Loundry Valla</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- website name -->
-    <header>
-        <h1>Welcome to Laundry Wallah</h1>
-    </header>
-    
-    <!-- Brief Description About Brand -->
-    <about>
-        <p>Laundry Wallah is a professional laundry service provider that offers convenient and efficient laundry solutions for individuals and businesses. Our team of experienced professionals is dedicated to delivering high-quality cleaning services, ensuring your clothes are fresh, clean, and well-maintained.</p>
-    </about>
 
-    <!-- Image -->
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmh0M7VKIjx8_lyN96SNWPam8Xi6CUjWRe9k-p47PfaQ&s=10" alt="Loundry Wallah" width="400" height="300">
+    <!-- navbar -->
 
-    <!-- Services -->
-    <h3>Our Services</h3>
-    <ul>
-        <li>Wash and Fold</li>
-        <li>Dry Cleaning</li>
-        <li>Ironing Services</li>
-        <li>Pickup and Delivery</li>
-    </ul>
-
-    <!-- Price list -->
-    <h3>Price List</h3>
-    <table border="1">
-        <tr>
-            <th>Service</th>
-            <th>Price</th>
-        </tr>
-        <tr>
-            <td>Wash and Fold</td>
-            <td>Rs1.50 per lb</td>
-        </tr>
-        <tr>
-            <td>Dry Cleaning</td>
-            <td>Rs5.00 per item</td>
-        </tr>
-        <tr>
-            <td>Ironing Services</td>
-            <td>Rs2.00 per item</td>
-        </tr>
-        <tr>
-            <td>Pickup and Delivery</td>
-            <td>Rs3.00 per trip</td>
-        </tr>
-    </table>
-
-    <!-- Book Now -->
-    <section>
-        <h3>Book Now</h3>
-        <form id="book-now">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required><br><br>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required><br><br>
-            <label for="phone">Phone:</label>
-            <input type="tel" id="phone" name="phone" required><br><br>
-            <label for="service">Select Service:</label>
-            <select id="service" name="service" required>
-                <option value="wash-fold">Wash and Fold</option>
-                <option value="dry-cleaning">Dry Cleaning</option>
-                <option value="ironing">Ironing Services</option>
-                <option value="pickup-delivery">Pickup and Delivery</option>
-            </select><br><br>
-            <input type="submit" value="Book Now">
-        </form>
+    <section class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="#">Logo</a>
+            </div>
+            <div class="links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About US</a></li>
+                <li><a href="#">Contact US</a></li>
+            </div>
+            <div class="username">
+                <a href="#">Username</a>
+            </div>
+        </div>
     </section>
 
-    <!-- contact us -->
-     <footer>
-        <p>Contact Us: info@laundrywallah.com | +92 123 456789</p>
-     </footer>
+    <!-- main section -->
+
+    <section class="mainSection">
+        <div class="main-container">
+            <!-- left section -->
+            <div class="left">
+                <div class="heading-line">
+                    <h1>Revitalize Your Clothes with Expert
+                        <span>Loundry Services!</span>
+                    </h1>
+                    <p>From premium dry cleaning to swift wash and fold, we deliver care and convenience. Schedule a pickup and rediscover the freshness of your clothes today!</p>
+                    <button>Book a Service Today!</button>
+                </div>
+            </div>
+
+            <!-- right section -->
+            <div class="right">
+                <img src="1.png" alt="main-image">
+            </div>
+        </div>
+    </section>
+    
+    <!-- footer section -->
+
+    <footer class="footer-section">
+        <div class="footer-container">
+            <div class="left-text">
+                <h3>Our Achievements</h3>
+            </div>
+            <div class="achievements">
+                <div class="box box1">
+                    <h3>15+</h3>
+                    <p>Loundry Services</p>
+                </div>
+                <div class="box box2">
+                    <h3>240+</h3>
+                    <p>Happy Customers</p>
+                </div>
+                <div class="box box3">
+                    <h3>2+ Yrs</h3>
+                    <p>Experience </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Our Services section -->
+
+    <section class="services">
+        <div class="services-comntainer">
+            <div class="Sleft">
+                <div class="left-top">
+                    <h3>Our Services</h3>
+                    <p>Click on the Add Button to add the Services to your cart</p>
+                </div>
+                <div class="left-mid">
+                    <div class="cart-services">
+                        <div class="Snames">
+                            <p>Dry Cleaning</p>
+                            <p>Wash & Fold</p>
+                            <p>Ironing</p>
+                            <p>Stain Removal</p>
+                            <p>Leather & Suede Cleaning</p>
+                            <p>Wedding Dress Cleaning</p>
+                        </div>
+                        <div class="Scost">
+                            <p>₹200.00</p>
+                            <p>₹100.00</p>
+                            <p>₹30.00</p>
+                            <p>₹500.00</p>
+                            <p>₹999.00</p>
+                            <p>₹2800.00</p>
+                        </div>
+                    </div>
+                    <div class="cart-buttons">
+                        <button class="addBtn1">Add Items</button>
+                        <button class="addBtn2">Add Items</button>
+                        <button class="addBtn3">Add Items</button>
+                        <button class="addBtn4">Add Items</button>
+                        <button class="addBtn5">Add Items</button>
+                        <button class="addBtn6">Add Items</button>
+                    </div>
+                </div>
+                <div class="left-bottom">
+                    <p>Add The Items to the Cart and Book Now</p>
+                </div>
+            </div>
+
+            <!-- Right section -->
+            <div class="Sright">
+                <div class="upper-Box">
+                    <div class="add-items">
+                        <p>Added Items<p>
+                    </div>
+
+                    <div class="top-lines">
+                            <p>Sr.No.</p>
+                            <p>Service Name</p>
+                            <p>Price</p>
+                    </div>
+                    <!-- Empty State -->
+                <div class="empty-state" id="cart-empty-state">
+                    <div class="info-icon">ⓘ</div>
+                    <p class="empty-title">No Items Added</p>
+                    <p class="empty-subtext">Add items to the cart from the services bar</p>
+                </div>
+
+                <!-- Empty class to be accessed by JS -->
+                <ul class="cart-items-list" id="cart-items-list"></ul>
+
+                <!-- Cart Total Footer -->
+                <div class="cart-footer">
+                    <span>Total Amount</span>
+                    <span class="total-price" id="total-amount">₹ 0</span>
+                </div>
+                </div>
+
+                <div class="lower-box">
+                    <div class="book-now">
+                        <p>Book Now</p>
+                    </div>
+                    <div class="personal-info">
+                        <label for="name" class="name">Full Name</label>
+                        <input type="text" id="name">
+
+                        <div class="flex-box">
+                            <div class="flex-box1">
+                                <label for="email" class="email">Email</label>
+                                <input type="email" name="eamil" id="email">
+                            </div>
+
+                            <div class="flex-box2">
+                                <label for="Pnumber" class="pnumber">Phone Number</label>
+                                <input type="tel" name="Pnumber" id="Pnumber">
+                            </div>
+
+                        </div>  
+                        <div class="bookButton">
+                            <button>Book Now</button>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- main footer -->
+    <section class="newslatter-booking">
+        <div class="main-features">
+            <div class="feature1">
+                <img src="#" alt="Premium Services">
+                <p>Premium Services</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta, corporis!</p>
+            </div>
+
+            <div class="feature2"><img src="#" alt="Premium Services">
+                <p>Premium Services</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta, corporis!</p>
+            </div>
+
+            <div class="feature3"><img src="#" alt="Premium Services">
+                <p>Premium Services</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta, corporis!</p>
+            </div>
+
+            <div class="feature4"><img src="#" alt="Premium Services">
+                <p>Premium Services</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta, corporis!</p>
+            </div>
+
+        </div>
+
+        <div class="newsletter">
+            <div class="subscribe">
+                <p>subscripe to our Newsletter</p>
+            </div>
+            <div class="info-sub">
+                <input type="text" placeholder="Full Name">
+                <input type="email" name="" id="" placeholder="Email">
+            </div>
+            <div class="subButton">
+                <a href="#">Subscribe</a>
+            </div>
+        </div>
+
+        <div class="main-footer">
+            <div class="bottomFooter footerBox1">
+                <a href="#">Logo</a>
+                <p>About Us</p>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+            <div class="bottomFooter footerBox2">
+                <p>Important Links</p>
+                <a href="#">About US</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of use</a>
+                <a href="#">Refund Policy</a>
+            </div>
+            <div class="bottomFooter footerBox3">
+                <p>Contact</p>
+                <p>mail@site.com</p>
+                <p>123456789</p>
+            </div>
+            <div class="bottomFooter footerBox4">
+                <p>Follow Us</p>
+                <img src="#" alt="">
+                <img src="#" alt="">
+                <img src="#" alt="">
+                <img src="#" alt="">
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
