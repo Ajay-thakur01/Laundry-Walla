@@ -14,18 +14,24 @@ let addBtn3 = document.querySelector(".addBtn3");
 let addBtn4 = document.querySelector(".addBtn4");
 let addBtn5 = document.querySelector(".addBtn5");
 let addBtn6 = document.querySelector(".addBtn6");
+let bookBtn = document.querySelector(".bookButton button");
 
 let emptyState = document.getElementById("cart-empty-state");
 let cartItemList = document.getElementById("cart-items-list");
 let totalPrice = document.getElementById("total-amount");
+let bookingMessage = document.getElementById("booking-message");
 
 let cartItems = [];
 let addedServices = {}; // Track which services are added
+
+bookingMessage.textContent = "Add items to cart to book.";
+bookingMessage.className = "booking-message";
 
 const cartUpdate = () => {
         emptyState.style.display = "none";
         cartItemList.innerHTML = "";
         let total = 0;
+        bookBtn.style.backgroundColor = "blue"
         cartItems.forEach((item, index) => {
             const li = document.createElement('li');
             li.style.display = 'flex';
@@ -42,6 +48,7 @@ const cartUpdate = () => {
             total += item.serviceCost;
         });
         totalPrice.textContent = `₹ ${total}`;
+        bookingMessage.textContent = ''
 };
 
 const addServiceToCart = (serviceIndex, button) => {
@@ -60,9 +67,32 @@ const removeServiceFromCart = (serviceIndex, button) => {
     cartItems = cartItems.filter((item, index) => item.serviceName !== services[serviceIndex].serviceName);
     addedServices[serviceIndex] = false;
     button.textContent = "Add Items";
+    button.style.setProperty("--button-after-background", '#3dbf23');
     button.style.setProperty("--button-after-content", '"+"');
     button.style.backgroundColor = "";
     cartUpdate();
+    bookingMessage.textContent = "Add items to cart to book.";
+    bookingMessage.className = "booking-message";
+};
+
+const resetBooking = () => {
+    cartItems = [];
+    addedServices = {};
+    cartItemList.innerHTML = "";
+    emptyState.style.display = "block";
+    totalPrice.textContent = "₹ 0";
+    bookBtn.style.backgroundColor = "";
+
+    [addBtn1, addBtn2, addBtn3, addBtn4, addBtn5, addBtn6].forEach((button) => {
+        button.textContent = "Add Items";
+        button.style.setProperty("--button-after-content", '"+"');
+        button.style.setProperty("--button-after-background", "#3dbf23");
+        button.style.backgroundColor = "";
+    });
+
+    document.querySelector("#name").value = "";
+    document.querySelector("#email").value = "";
+    document.querySelector("#Pnumber").value = "";
 };
 
 // Add button event listeners
@@ -112,4 +142,14 @@ addBtn6.addEventListener("click", () => {
     } else {
         addServiceToCart(5, addBtn6);
     }
+});
+
+bookBtn.addEventListener("click", () => {
+    if (cartItems.length === 0) {
+        return;
+    }
+
+    resetBooking();
+    bookingMessage.textContent = "Email has been sent to you successfully";
+    bookingMessage.className = "booking-message success";
 });
