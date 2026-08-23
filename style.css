@@ -298,7 +298,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: var(--button-after-background, rgb(20, 224, 20));
+    background: var(--button-after-background, #3dbf23);
     color: #ffffff;
     font-size: 0.9rem;
     font-weight: 700;
@@ -445,13 +445,26 @@
     width: 100%;
     padding: 12px 20px;
     border-radius: 10px;
-    background-color: #4ca8eb;
+    background-color: #c7e4f8;
+    /* background-color: #4ca8eb; */
     border: none;
     color: white;
     font-size: 1.1rem;
     font-weight: 700;
     cursor: pointer;
 }
+
+.booking-message{
+    min-height: 24px;
+    margin-top: 25px;
+    color: #b45309;
+    font-size: 1.2rem;
+}
+
+.booking-message.success{
+    color: #3dbf23;
+}
+
 
 /* Newsletter and Footer */
 
