@@ -3,286 +3,306 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loundry Valla</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Loundry Walla</title>
+    <link rel="stylesheet" href="resources/css/style.css">
+    <link rel="stylesheet" href="resources/css/queries.css">
+    <link rel="stylesheet" href="vendors/css/grid.css">
+    <link rel="stylesheet" href="vendors/css/normalize.css">
 </head>
 <body>
 
-    <!-- navbar -->
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">Laundry<span>Walla</span></div>
 
-    <section class="navbar" data-aos="fade-in"  data-aos-duration="2000">
-        <div class="container">
-            <div class="logo">
-                <a href="#">Logo</a>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+
+        <div class="user-name">User Name</div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Revitalize your Clothes with Expert <span>Loundry Services</span></h1>
+            <p>
+                Fresh, clean and perfectly cared-for clothes delivered
+                right to your doorstep.
+            </p>
+
+            <a href="#booking" class="btn">Book a Service Today</a>
+        </div>
+
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1517677208171-0bc6725a3e60"
+                 alt="Laundry Service">
+        </div>
+    </section>
+
+    <!-- Service Overview -->
+    <section class="overview">
+        <div class="overview-item">
+            <h2>15+</h2>
+            <p>Laundry Services</p>
+        </div>
+
+        <div class="overview-item">
+            <h2>240+</h2>
+            <p>Happy Customers</p>
+        </div>
+
+        <div class="overview-item">
+            <h2>2+</h2>
+            <p>Years of Experience</p>
+        </div>
+    </section>
+
+    <!-- Booking Services -->
+    <section class="booking-section" id="booking">
+
+        <!-- Left Div -->
+        <div class="services-box" id="services">
+            <h2>Our Services</h2>
+            <p class="service-info">
+                Click on the Add To Cart button to add the services to your cart.
+            </p>
+
+            <div class="service-list">
+
+                <div class="service">
+                    <div>
+                        <span>🧥</span>
+                        <strong>Dry Cleaning</strong>
+                        <span class="price">₹200.00</span>
+                    </div>
+                    <button class="add-btn" data-service="Dry Cleaning" data-price="200">Add Item </button>
+                </div>
+
+                <div class="service">
+                    <div>
+                        <span>🧺</span>
+                        <strong>Wash & Fold</strong>
+                        <span class="price">₹100.00</span>
+                    </div>
+                    <button class="add-btn" data-service="Wash & Fold" data-price="100">Add Item </button>
+                </div>
+
+                <div class="service">
+                    <div>
+                        <span>👔</span>
+                        <strong>Ironing</strong>
+                        <span class="price">₹30.00</span>
+                    </div>
+                    <button class="add-btn" data-service="Ironing" data-price="30">Add Item </button>
+                </div>
+
+                <div class="service">
+                    <div>
+                        <span>🧴</span>
+                        <strong>Stain Removal</strong>
+                        <span class="price">₹500.00</span>
+                    </div>
+                    <button class="add-btn" data-service="Stain Removal" data-price="500">Add Item </button>
+                </div>
+
+                <div class="service">
+                    <div>
+                        <span>🧥</span>
+                        <strong>Leather & Suede Cleaning</strong>
+                        <span class="price">₹999.00</span>
+                    </div>
+                    <button class="add-btn" data-service="Leather & Suede Cleaning" data-price="999">Add Item </button>
+                </div>
+
+                <div class="service">
+                    <div>
+                        <span>👗</span>
+                        <strong>Wedding Dress Cleaning</strong>
+                        <span class="price">₹2800.00</span>
+                    </div>
+                    <button class="add-btn" data-service="Wedding Dress Cleaning" data-price="2800">Add Item </button>
+                </div>
+
             </div>
-            <div class="links">
-                <li><a href="#main">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#footer">About US</a></li>
-                <li><a href="#newsletter">Contact US</a></li>
+
+            <p class="cart-info">ⓘ Add the items to the cart and book now.</p>
+        </div>
+
+        <!-- Right Div -->
+        <div class="booking-box">
+
+            <!-- Added Items -->
+            <div class="cart-box">
+                <h3>Added Items</h3>
+
+                <div class="cart-table">
+                    <div class="table-header">
+                        <span>S.No</span>
+                        <span>Service Name</span>
+                        <span>Price</span>
+                    </div>
+
+                    <div class="empty-cart">
+                        No items added yet.
+                    </div>
+                    
+                    <div class="empty-cart-services"></div>
+                </div>
+
+                <div class="total">
+                    <strong>Total Amount</strong>
+                    <strong id="amount">₹0.00</strong>
+                </div>
             </div>
-            <div class="username">
-                <a href="#">Username</a>
+
+            <!-- Book Now -->
+            <div class="book-box" id="contact">
+                <h3>Book Now</h3>
+
+                <form>
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" placeholder="Ajay" required>
+
+                    <div class="input-row">
+                        <div>
+                            <label for="email">Email ID</label>
+                            <input type="email" id="email" placeholder="abc@gmail.com" required>
+                        </div>
+
+                        <div>
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" placeholder="0000000000" required>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="book-btn">Book Now</button>
+                </form>
+
+                <p class="confirmation">
+                    Thank you for booking the service! We will get back to you soon!.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Quality Description -->
+    <section class="quality-section" id="about">
+        <div class="section-heading">
+            <span>Why Choose Us</span>
+            <h2>Quality Laundry Services</h2>
+            <p>
+                We provide reliable and professional laundry services
+                designed to make your everyday life easier.
+            </p>
+        </div>
+
+        <div class="quality-grid">
+            <div class="quality-card">
+                <div class="icon">✨</div>
+                <h3>Premium Services</h3>
+                <p>
+                    High-quality cleaning and laundry care for all types
+                    of clothes.
+                </p>
+            </div>
+
+            <div class="quality-card">
+                <div class="icon">⚡</div>
+                <h3>Quick Support</h3>
+                <p>
+                    Our team is always ready to assist you whenever
+                    you need us.
+                </p>
+            </div>
+
+            <div class="quality-card">
+                <div class="icon">🚚</div>
+                <h3>Timely Delivery</h3>
+                <p>
+                    Get your fresh and clean clothes delivered right
+                    on time.
+                </p>
+            </div>
+
+            <div class="quality-card">
+                <div class="icon">💰</div>
+                <h3>Affordable Prices</h3>
+                <p>
+                    Professional laundry services at prices that
+                    fit your budget.
+                </p>
             </div>
         </div>
     </section>
 
-    <!-- main section -->
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="newsletter-content">
+            <span>Stay Updated</span>
+            <h2>Subscribe to Our Newsletter</h2>
+            <p>
+                Subscribe to receive the latest updates, offers,
+                promotions and news from our laundry service.
+            </p>
 
-    <section id="main" class="mainSection" data-aos="fade-in"  data-aos-duration="2000">
-        <div class="main-container">
-            <!-- left section -->
-            <div class="left">
-                <div class="heading-line">
-                    <h1>Revitalize Your Clothes with Expert
-                        <span>Loundry Services!</span>
-                    </h1>
-                    <p>From premium dry cleaning to swift wash and fold, we deliver care and convenience. Schedule a pickup and rediscover the freshness of your clothes today!</p>
-                    <button data-target="#services" >Book a Service Today!</button>
-                </div>
-            </div>
+            <form class="newsletter-form">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <button type="submit">Subscribe</button>
+            </form>
 
-            <!-- right section -->
-            <div class="right">
-                <img src="1.png" alt="main-image">
+            <div class="newsconfirmation">
+            <p >
+                Thank you for Subscribing the Newsletter! We will get back to you soon!.
+            </p>
             </div>
         </div>
     </section>
-    
-    <!-- footer section -->
 
-    <footer class="footer-section" data-aos="fade-in"  data-aos-duration="2000">
-        <div class="footer-container">
-            <div class="left-text">
-                <h3>Our Achievements</h3>
-            </div>
-            <div class="achievements">
-                <div class="box box1">
-                    <h3>15+</h3>
-                    <p>Loundry Services</p>
-                </div>
-                <div class="box box2">
-                    <h3>240+</h3>
-                    <p>Happy Customers</p>
-                </div>
-                <div class="box box3">
-                    <h3>2+ Yrs</h3>
-                    <p>Experience </p>
-                </div>
-            </div>
+    <!-- Footer -->
+    <footer>
+        <div class="col span_1_of_4">
+            <h2>Logo</h2>
+            <span>About us</sapn>
+            <p>Lorem ipsum dolor sit amet consectetur.</p>
         </div>
+        <div class="col span_1_of_4">
+            <h2>Important links</h2>
+            <ul>
+                <li><a href="#">About us </a></li>
+                <li><a href="#">Contact us </a></li>
+                <li><a href="#">Privacy Policy </a></li>
+                <li><a href="#">Terms of use </a></li>
+                <li><a href="#">Refund Policy </a></li>
+            </ul>
+        </div>
+        <div class="col span_1_of_4">
+            <h2>Contact</h2>
+            <p>mail@site.com</p>
+            <p>+91 9123456789</p>
+        </div>
+        <div class="col span_1_of_4">
+            <h2>Follow us</h2>
+            <ion-icon name="logo-instagram"></ion-icon>
+            <ion-icon name="logo-facebook"></ion-icon>
+            <ion-icon name="logo-youtube"></ion-icon>
+            <ion-icon name="logo-threads"></ion-icon>
+        </div>
+
     </footer>
+    <div class="copyright">
+    <p>© 2026 LaundryWalla. All Rights Reserved.</p>
+    </div>
+    
+    
+    <script src="resources/js/script.js"></script>
 
-    <!-- Our Services section -->
-
-    <section class="services" data-aos="fade-in"  data-aos-duration="2000" id="services">
-        <div class="services-comntainer">
-            <div class="Sleft">
-                <div class="left-top">
-                    <h3>Our Services</h3>
-                    <p>Click on the Add Button to add the Services to your cart</p>
-                </div>
-                <div class="left-mid">
-                    <div class="cart-services">
-                        <div class="Snames">
-                            <p>Dry Cleaning</p>
-                            <p>Wash & Fold</p>
-                            <p>Ironing</p>
-                            <p>Stain Removal</p>
-                            <p>Leather & Suede Cleaning</p>
-                            <p>Wedding Dress Cleaning</p>
-                        </div>
-                        <div class="Scost">
-                            <p>₹200.00</p>
-                            <p>₹100.00</p>
-                            <p>₹30.00</p>
-                            <p>₹500.00</p>
-                            <p>₹999.00</p>
-                            <p>₹2800.00</p>
-                        </div>
-                    </div>
-                    <div class="cart-buttons">
-                        <button class="addBtn1">Add Items</button>
-                        <button class="addBtn2">Add Items</button>
-                        <button class="addBtn3">Add Items</button>
-                        <button class="addBtn4">Add Items</button>
-                        <button class="addBtn5">Add Items</button>
-                        <button class="addBtn6">Add Items</button>
-                    </div>
-                </div>
-                <div class="left-bottom">
-                    <p>Add The Items to the Cart and Book Now</p>
-                </div>
-            </div>
-
-            <!-- Right section -->
-            <div class="Sright">
-                <div class="upper-Box">
-                    <div class="add-items">
-                        <p>Added Items<p>
-                    </div>
-
-                    <div class="top-lines">
-                            <p>Sr.No.</p>
-                            <p>Service Name</p>
-                            <p>Price</p>
-                    </div>
-                    <!-- Empty State -->
-                <div class="empty-state" id="cart-empty-state">
-                    <div class="info-icon">ⓘ</div>
-                    <p class="empty-subtext">Add items to the cart from the services bar</p>
-                </div>
-
-                <!-- Empty class to be accessed by JS -->
-                <ul class="cart-items-list" id="cart-items-list"></ul>
-
-                <!-- Cart Total Footer -->
-                <div class="cart-footer">
-                    <span>Total Amount</span>
-                    <span class="total-price" id="total-amount">₹ 0</span>
-                </div>
-                </div>
-
-                <div class="lower-box">
-                    <div class="book-now">
-                        <p>Book Now</p>
-                    </div>
-                    <div class="personal-info">
-                        <label for="name" class="name">Full Name</label>
-                        <input type="text" id="name" placeholder="username">
-
-                        <div class="flex-box">
-                            <div class="flex-box1">
-                                <label for="email" class="email">Email</label>
-                                <input type="email" name="eamil" id="email" placeholder="abc@gmail.com">
-                            </div>
-
-                            <div class="flex-box2">
-                                <label for="Pnumber" class="pnumber">Phone Number</label>
-                                <input type="tel" name="Pnumber" id="Pnumber" placeholder="1234567890">
-                            </div>
-
-                        </div>  
-                        <div class="bookButton" >
-                            <button>Book Now</button>
-
-                        </div>  
-                        <p class="booking-message" id="booking-message" ></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- main footer -->
-    <section id="footer" class="newslatter-booking" data-aos="fade-in"  data-aos-duration="2000">
-        <div class="main-features">
-            <div class="feature1">
-                <img src="#" alt="Premium Services">
-                <p>Premium Services</p>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta, corporis!</p>
-            </div>
-
-            <div class="feature2"><img src="#" alt="Premium Services">
-                <p>Premium Services</p>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta, corporis!</p>
-            </div>
-
-            <div class="feature3"><img src="#" alt="Premium Services">
-                <p>Premium Services</p>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta, corporis!</p>
-            </div>
-
-            <div class="feature4"><img src="#" alt="Premium Services">
-                <p>Premium Services</p>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta, corporis!</p>
-            </div>
-
-        </div>
-
-        <div class="newsletter" id="newsletter">
-            <div class="subscribe">
-                <p>subscripe to our Newsletter</p>
-            </div>
-            <div class="info-sub">
-                <input type="text" placeholder="Full Name">
-                <input type="email" name="" id="" placeholder="Email">
-            </div>
-            <div class="subButton">
-                <a href="#">Subscribe</a>
-            </div>
-        </div>
-
-        <div class="main-footer">
-            <div class="bottomFooter footerBox1">
-                <a href="#">Logo</a>
-                <p>About Us</p>
-                <p>Lorem ipsum dolor sit amet consectetur.</p>
-            </div>
-            <div class="bottomFooter footerBox2">
-                <p>Important Links</p>
-                <a href="#">About US</a>
-                <a href="#">Contact Us</a>
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of use</a>
-                <a href="#">Refund Policy</a>
-            </div>
-            <div class="bottomFooter footerBox3">
-                <p>Contact</p>
-                <p>mail@site.com</p>
-                <p>123456789</p>
-            </div>
-            <div class="bottomFooter footerBox4">
-                <p>Follow Us</p>
-                <img src="#" alt="">
-                <img src="#" alt="">
-                <img src="#" alt="">
-                <img src="#" alt="">
-            </div>
-        </div>
-    </section>
-
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script>
-$(document).ready(function(){
-  // Add smooth scrolling to all links
-  $("a").on('click', function(event) {
-
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
-
-      // Store hash
-      var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 800, function(){
-
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
-  });
-});
-$("button[data-target]").on("click", function () {
-    const target = $(this).data("target");
-
-    $("html, body").animate({
-        scrollTop: $(target).offset().top
-    }, 800);
-});
-</script>
-
-    <script src="script.js"></script>
-
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
-  
+    <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
