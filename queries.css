@@ -1,0 +1,142 @@
+/* 
+   RESPONSIVE DESIGN
+ */
+
+@media (max-width: 900px) {
+
+    footer {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    footer .col {
+        width: auto;
+        margin: 0 auto;
+        padding: 30px 8%;
+    }
+
+    footer .col p {
+        width: auto;
+        max-width: 100%;
+    }
+
+    .navbar {
+        padding: 0 4%;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .hero {
+        padding: 60px 6%;
+    }
+
+    .hero-content h1 {
+        font-size: 42px;
+    }
+
+    .booking-section {
+        grid-template-columns: 1fr;
+    }
+
+    .quality-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .span_1_of_4 {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .navbar {
+        height: auto;
+        padding: 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content,
+    .hero-image {
+        width: 100%;
+    }
+
+    .hero-image img {
+        height: 300px;
+    }
+
+    .overview {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .quality-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+    }
+
+    .newsletter-form input,
+    .newsletter-form button {
+        width: 100%;
+    }
+
+    .input-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+}
+
+@media (max-width: 480px) {
+
+    footer {
+        grid-template-columns: 1fr;
+    }
+
+    footer .col {
+        padding: 25px 10%;
+    }
+
+    .hero-content h1 {
+        font-size: 34px;
+    }
+
+    .booking-section {
+        padding: 0 15px;
+        margin: 50px auto;
+    }
+
+    .services-box,
+    .cart-box,
+    .book-box {
+        padding: 20px;
+    }
+
+    .service {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .add-btn {
+        width: 100%;
+    }
+
+    .quality-section,
+    .newsletter {
+        padding: 60px 5%;
+    }
+}
